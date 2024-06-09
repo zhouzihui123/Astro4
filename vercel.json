@@ -1,5 +1,5 @@
 {  
   "rewrites": [  
-    { "source": "/:path*", "destination": "/index.astro" }  
+    { "source": "/:path*", "destination": "/index.html" }  
   ]  
 }
