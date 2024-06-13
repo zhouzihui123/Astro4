@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import "./styles/global.css";
+---
+
+<Layout title="欢迎来到Astro">
+    <main>
+        <nav>
+            <a href="/">首页</a>
+            <a href="/about/">关于</a>
+            <a href="/blog/">博客</a>
+            <a href="/notes/">笔记</a>
+        </nav>
+        <h1 class="text-gradient">课程笔记</h1>
+        <p>在这个页面，我将展示一些关于我的课程笔记。</p>
+    </main>
+    <section class="link-card-grid">
+      <article class="link-card">
+        <a href="/md/1" >陋室铭赏析</a>
+      <article class="link-card">
+            <a href="/md/2" >Astro 安装及部署</a>
+        </article>
+        <article class="link-card">
+            <a href="/md/3" >在Astro中创建页面及链接</a>
+            <article class="link-card">
+        </article>
+    </section>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: rgb(245, 222, 226);
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  
+  nav a {
+    color: rgb(245, 222, 226);
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .astro-a {
+    display: block;
+    margin: 5px 0; /* 调整间距 */
+  }
+  
+  h1.text-gradient {
+    /* ... */
+  }
+  
+  @keyframes gradient-animation {
+    /* ... */
+  }
+  
+  .link-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .link-card {
+    flex-basis: calc(50% - 2rem); /* 两列布局，减去间距 */
+    box-sizing: border-box;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* 响应式调整 */
+  @media (max-width: 600px) {
+    .link-card {
+      flex-basis: 100%; /* 在小屏幕上占满整行 */
+    }
+  }
+</style>
