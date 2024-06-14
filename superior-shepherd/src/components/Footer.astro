@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页脚示例</title>
+    <style>
+        footer {
+            background-color: #005a9c; /* 深色背景 */
+            color: #fff; /* 白色文字 */
+            text-align: center; /* 文本居中对齐 */
+            padding: 20px 0; /* 顶部和底部内边距 */
+            font-size: 0.9rem; /* 字体大小 */
+        }
+
+        footer p {
+            margin: 0; /* 移除段落的外边距 */
+        }
+
+        footer a {
+            color: #1e90ff; /* 链接的颜色 */
+            text-decoration: none; /* 去除下划线 */
+            font-weight: bold; /* 加粗字体 */
+        }
+
+        footer a:hover {
+            text-decoration: underline; /* 鼠标悬浮时添加下划线 */
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            footer {
+                text-align: left; /* 在小屏幕上文本左对齐 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 其他页面内容 -->
+
+    <footer>
+        <p>&copy; 2024 <a href=https://astro4444.vercel.app/>我的Astro网站</a>. 版权所有. 作者: <a href=https://astro4444.vercel.app/>周子惠</a></p>
+    </footer>
+
+</body>
+</html>

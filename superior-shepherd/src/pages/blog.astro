@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Menu from "../components/Menu.astro"
+import Footer from "../components/Footer.astro"
 import "./styles/global.css";
 ---
 
@@ -8,11 +10,8 @@ import "./styles/global.css";
 	<main>
 		<svg>	···
     </svg>
-			<a href="/">首页</a>
-			<a href="/about/">关于</a>
-			<a href="/blog/">博客</a>
-			<a href="/notes/">笔记</a>
-	
+		<Menu/>
+		<Footer />
 		<h1>网络文章</h1>
 	<p>在这个页面，我将展示一些关于我的文章</p>
 		</p>
@@ -23,6 +22,13 @@ import "./styles/global.css";
 </Layout>
 
 <style>
+	body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Arial', sans-serif;
+			background: linear-gradient(to right, #c2e5ef, #f3e2af); /* 蓝色到黄色的渐变 */
+	}
+	
 	main {
 		margin: auto;
 		padding: 1rem;
@@ -57,10 +63,10 @@ import "./styles/global.css";
 	}
 	p{
 		text-align: justify;
-		color: azure;
+		color: rgb(174, 139, 215);
 	}
 	.text-gradient {
-		background-image: var(--accent-gradient);
+		background: linear-gradient(to right, #c2e5ef, #f3e2af);;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
