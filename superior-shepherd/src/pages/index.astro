@@ -3,140 +3,128 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Menu from "../components/Menu.astro"
 import Footer from "../components/Footer.astro"
+import MusicPlayer from "../components/MusicPlayer.astro"
 import "./styles/global.css";
 
-const pageTitle = "首页";
+
+const pageTitle = "心理健康科普";
 ---
 
-<Layout title="欢迎来到Astro">
-	<main>
+<Layout title={pageTitle}>
+	<main></main>
 		<svg>···
 		</svg>
 		<Menu/>
 		<Footer />
+		<MusicPlayer />
 
-		<h1>欢迎来到 <span class="text-gradient">Astro</span></h1>
-		<h2>P211012592<span class="text-gradient">周子惠</span></h2>
-		<h3>2021级新闻学3班<span><a href="https://www.baidu.com"></span> </a></h3>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br
-			/>
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-	<footer>
-		<hr />
-		<p><span></span></p>
-	</footer>
-</Layout>
+		
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心理健康科普</title>
+    <h1 style="text-align:center;">心理健康<span></span>科普网站</h1>
+		<h2 style="text-align: center;">P211012592<span>周子惠</span></h2>
+		<!DOCTYPE html>
+		<html lang="zh">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>心理健康科普 - 心灵鸡汤生成器</title>
+			<style>
+				body {
+					font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+					background-color: #fff; /* 背景颜色 */
+					margin: 0;
+					padding: 10px;
+					text-align: center;
+				}
+				#quoteContainer {
+					max-width: 500px; /* 生成器的最大宽度 */
+					margin: 35px auto; /* 居中显示 */
+				}
+				#generateQuoteButton {
+					padding: 10px 20px;
+					font-size: 16px;
+					color: #333; /* 按钮文本颜色 */
+					background-color: #ffc107; /* 按钮背景颜色 */
+					border: none;
+					border-radius: 5px;
+					cursor: pointer;
+					transition: background-color 0.3s;
+				}
+				#generateQuoteButton:hover {
+					background-color: #e0a800; /* 鼠标悬浮时按钮颜色变深 */
+				}
+				
+				#quoteDisplay {
+					margin-top: 20px;
+					padding: 15px;
+					font-size: 16px;
+					line-height: 1.6;
+					color: #333; /* 文本颜色 */
+					background-color: #f5f5f5; /* 显示区域背景颜色 */
+					border-left: 4px solid #ffc107; /* 边框颜色 */
+					border-radius: 5px;
+				}
+				.animate-hover:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
 
-<style>
-	/* 页面整体样式 */
-	body {
-			margin: 0;
-			padding: 0;
-			font-family: 'Arial', sans-serif;
-			background: linear-gradient(to right, #c2e5ef, #f3e2af); /* 蓝色到黄色的渐变 */
-	}
+	@keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+      20%, 40%, 60%, 80% { transform: translateX(5px); }
+    }
 
-	main {
-			margin: auto;
-			padding: 1rem;
-			width: 800px;
-			max-width: calc(100% - 2rem);
-			color: #005a9c;
-			font-size: 20px;
-			line-height: 1.6;
-	}
+    .animate-shake {
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97);
+      /* 确保transform属性正确设置 */
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+    }
+			</style>
+		</head>
+		<body>
+		
+			<div id="quoteContainer">
+				<button id="generateQuoteButton">心灵慰藉</button>
+				<div id="quoteDisplay"></div>
+			</div>
+		
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					const quotes = [
+						"每一次挑战都是成长的机会。",
+						"不要害怕失败，它是通往成功的必经之路。",
+						"相信自己，你拥有改变未来的力量。",
+						"每天都是一个新的开始，把握今天，让明天更好。",
+						"微笑是心灵的良药，它不需要成本，却能治愈许多。",
+						"深呼吸，放轻松，生活不会因为一时的忧虑而改变。",
+						"你是自己命运的主宰，不要让他人的看法左右你的选择。",
+						"不要等待机会，而是创造机会。",
+						"记住，最大的风险是从来不敢冒险。",
+						"你的想法塑造你的现实，保持积极，好事就会发生。"
+					];
+		
+					const generateQuoteButton = document.getElementById('generateQuoteButton');
+					const quoteDisplay = document.getElementById('quoteDisplay');
+		
+					generateQuoteButton.addEventListener('click', function() {
+						const randomIndex = Math.floor(Math.random() * quotes.length);
+						quoteDisplay.textContent = '“' + quotes[randomIndex] + '”'; // 添加引号
+						// 假设这是在某个点击事件处理函数中
+const button = document.getElementById('generateQuoteButton');
+button.classList.add('animate-shake');
 
-	nav a {
-			color: white;
-	}
-
-	.astro-a {
-			position: absolute;
-			top: -32px;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 220px;
-			height: auto;
-			z-index: -1;
-	}
-
-	h1 {
-			font-size: 4rem;
-			font-weight: 700;
-			line-height: 1;
-			text-align: center;
-			margin-bottom: 1em;
-	}
-
-	h2 {
-			text-align: center;
-	}
-
-	/* 文本渐变样式 */
-	.text-gradient {
-			background-image: linear-gradient(to right, #005a9c, #f2c94c); /* 蓝色到黄色的文本渐变 */
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 400%;
-			background-position: 0%;
-			animation: textGradient 5s infinite alternate;
-	}
-
-	@keyframes textGradient {
-			0% { background-position: 0%; }
-			100% { background-position: 100%; }
-	}
-
-	.instructions {
-			margin-bottom: 2rem;
-			border: 1px solid rgba(255, 255, 255, 0.25);
-			background: rgba(255, 255, 255, 0.1);
-			padding: 1.5rem;
-			border-radius: 8px;
-	}
-
-	.instructions code {
-			font-size: 0.8em;
-			font-weight: bold;
-			background: rgba(255, 255, 255, 0.1);
-			color: white;
-			border-radius: 4px;
-			padding: 0.3em 0.4em;
-	}
-
-	.instructions strong {
-			color: white;
-	}
-
-	.link-card-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-			gap: 2rem;
-			padding: 0;
-	}
-</style>
+// 动画结束后移除动画类
+button.addEventListener('animationend', () => {
+  button.classList.remove('animate-shake');
+});
+						
+					});
+				});
+			</script>
+		</body>
+		</html>

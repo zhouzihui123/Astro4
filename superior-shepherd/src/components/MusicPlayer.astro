@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>音乐播放器样式示例</title>
+  <style>
+    /* 音乐播放器容器样式 */
+    .audio-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 8px 0;
+    }
+
+    /* 音乐播放器样式 */
+    audio {
+      border: 1px solid #ddd; /* 边框 */
+      border-radius: 4px; /* 边框圆角 */
+      background-color: #f7f7f7; /* 背景色 */
+    }
+
+    /* 控件样式，例如播放/暂停按钮 */
+    audio::-webkit-media-controls-play-button {
+      color: #333; /* 按钮颜色 */
+    }
+
+    /* 进度条样式 */
+    audio::-webkit-media-controls-current-time-display {
+      color: #333; /* 文字颜色 */
+    }
+
+    /* 音量控制样式 */
+    audio::-webkit-media-controls-volume-slider {
+      color: #333; /* 滑块颜色 */
+    }
+    <button id="generateQuoteButton" class="animate-hover animate-shake">心灵慰藉</button>
+  </style>
+</head>
+<body>
+
+  <div class="audio-container">
+    <audio controls autoplay loop muted>
+      <source src="http://music.163.com/song/media/outer/url?id=406232.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+</body>
+</html>

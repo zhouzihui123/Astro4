@@ -2,46 +2,67 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>页脚示例</title>
+    <title>心理健康科普网站</title>
     <style>
+        /* 全局样式 */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* footer样式 */
         footer {
-            background-color: #005a9c; /* 深色背景 */
-            color: #fff; /* 白色文字 */
-            text-align: center; /* 文本居中对齐 */
-            padding: 20px 0; /* 顶部和底部内边距 */
-            font-size: 0.9rem; /* 字体大小 */
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px; /* 根据内容调整高度 */
+            z-index: 1000;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
         }
 
-        footer p {
-            margin: 0; /* 移除段落的外边距 */
+        /* footer中hr样式 */
+        footer hr {
+            border-top: 1px solid #555;
+            margin: 0 auto; /* 居中显示 */
+            width: 80%; /* 根据需要调整宽度 */
         }
 
-        footer a {
-            color: #1e90ff; /* 链接的颜色 */
-            text-decoration: none; /* 去除下划线 */
-            font-weight: bold; /* 加粗字体 */
+        /* footer内容样式 */
+        .footer-content {
+            text-align: center; /* 确保文本居中 */
         }
 
-        footer a:hover {
-            text-decoration: underline; /* 鼠标悬浮时添加下划线 */
+        .footer-content p {
+            margin: 0;
+            padding: 10px 0;
+            color: #948c8c;
+            font-size: 14px;
         }
 
         /* 响应式设计 */
-        @media (max-width: 600px) {
-            footer {
-                text-align: left; /* 在小屏幕上文本左对齐 */
+        @media (max-width: 768px) {
+            .footer-content p {
+                font-size: 12px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- 页面的主体内容 -->
+    <!-- 这里可以添加您的其他HTML内容 -->
 
-    <!-- 其他页面内容 -->
-
+    <!-- 页面底部的页脚 -->
     <footer>
-        <p>&copy; 2024 <a href=https://astro4444.vercel.app/>我的Astro网站</a>. 版权所有. 作者: <a href=https://astro4444.vercel.app/>周子惠</a></p>
+        <div class="footer-content">
+            <p>版权所有③心理健康科普网站 联系我们：2473005809@qq.com</p>
+        </div>
+        <hr>
     </footer>
-
 </body>
 </html>

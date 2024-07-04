@@ -1,25 +1,37 @@
 ---
+
 ---
+
 <a href="/">首页</a>
-<a href="/about/">关于</a>
-<a href="/blog/">博客</a>
-<a href="/notes/">笔记</a>
-
-
-
+<a href="/self-assessment/">自我判断</a>
+<a href="/treatment/">治疗方法</a>
+<a href="/causes/">成因分析</a>
 
 <style>
   a {
-    color: black;
-    text-decoration: none;
-    margin: 5px;
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
+    color: rgb(91, 47, 47); /* 链接的颜色 */
+    text-decoration: none; /* 去除下划线 */
+    margin: 0 30px; /* 链接之间的外边距 */
+    padding: 5px 15px; /* 链接的内边距 */
+    border-radius: 5px; /* 链接的圆角 */
+    transition: background-color 0.3s; /* 背景颜色变化的过渡效果 */
+    font-family: '华文琥珀', sans-serif; /* 设置字体族，华文琥珀需要是Web可用字体或本地字体 */
+    font-size: 20px; /* 字体大小 */
+    line-height: 1.5; /* 行高 */
+      padding: 10px 0; 
+    float: left;
+    margin-top: 60px;
+
   }
-  
+
   a:hover {
-    text-decoration: underline;
-    background-color: blue;
-  
+    text-decoration: none; /* 鼠标悬停时不显示下划线 */
+    background-color: rgb(231, 202, 144); /* 鼠标悬停时的背景颜色 */
   }
-  </style>
+
+  .footer-content p {
+    margin: 0;
+    padding: 10px 0;
+    color: #a86c6c; /* 页脚文字颜色 */
+  }
+</style>
